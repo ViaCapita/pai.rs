@@ -1,0 +1,40 @@
+<div class="page-wrapper">
+    <section class="header-14-sub">
+        <div class="background">&nbsp;</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="header-14">
+                        <img src="/pairs.png">
+                    </div>
+                	<h3>Signin to our private beta.</h3>
+                	<div class="row">
+                        <div class="subscribe-form col-sm-8 col-sm-offset-2">
+                            <form>
+                                <div class="form-group has-feedback">
+                                    {{input type="text" value=model.email  class="form-control input-hg" placeholder="Email Address"}}
+                                    {{#if emailValidated}}
+                                        <span class="form-control-feedback fui-check-circle" style="color: #de4e43;"></span>
+                                    {{/if}}
+                                </div>
+                                <div class="form-group has-feedback">
+                                    {{input type="password" value=model.password  class="form-control input-hg" placeholder="Password"}}
+                                    {{#if passwordValidated}}
+                                        <span class="form-control-feedback fui-check-circle" style="color: #de4e43;"></span>
+                                    {{/if}}
+                                </div>
+                                {{#if hasPasswordError}}
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close fui-cross" {{action "clearError"}}></button>
+                                       ERROR: {{passwordError.message}}
+                                    </div>
+                                {{/if}}
+                                <button {{action "authenticate"}} class="btn btn-hg btn-primary btn-block" type="submit">Sign In</button>
+                            </form>
+                        </div>
+                    </div><br><br><br><br><br><br><br>               
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

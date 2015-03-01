@@ -1,0 +1,75 @@
+
+.header {
+	padding: 0;
+
+	.navbar {
+		margin-bottom: 0;
+		border-radius: 0px;
+		border-bottom: solid 1px @clouds;
+		min-height: 72px;
+		background: white;
+
+		.navbar-header {
+
+			a.navbar-brand {
+				padding: 18px 0;
+			}
+
+			h1 {
+				margin-bottom: 0;
+		
+				a.navbar-brand {
+					padding: 21px 0 0 0;
+					margin: 0;
+				}
+			}
+
+			.logo-img {
+				height: 36px;
+			}
+
+			.navbar-toggle {
+				padding: 12px 24px;
+				height: 72px;
+
+				&:before {
+					color: @wet-asphalt;	
+				}
+
+				&:hover {
+
+					&:before {
+						color: @turquoise;
+					}
+				}
+			}
+		}
+
+		.navbar-collapse {
+			max-height: 500px;
+
+			ul {
+
+				&.navbar-nav {
+
+					li {
+
+						a {
+							padding: 24px;
+							color: @wet-asphalt;
+
+							&:hover {
+								color: @turquoise;
+							}
+						}
+
+						&.active a {
+							color: @turquoise;
+						}
+
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<a {{action "toggleExpanded"}}>
+  {{name}} 
+  <span class="caret"></span>
+</a>
+{{#if expanded}}
+  <ul class="dropdown-menu" role="menu" style="display: block;">
+    {{#each link in links}}
+    <li>
+      {{#link-to link.action}}{{link.name}}{{/link-to}}
+    </li>
+    {{/each}}
+  </ul>
+{{/if}}

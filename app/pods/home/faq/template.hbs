@@ -1,0 +1,243 @@
+{{!-- <section id="section-info" class="hero">{{slideshow-content}}</section>   --}}   
+<div class="jumbotron">
+	<div class="page-header ">
+		<h1 class="text-center">FAQ <br><small> You have questions,we have answers.</small></h1>
+	  	<div class="well well-sm entete"></div>
+	</div>
+</div>
+<section id="section-info" class="hero">
+
+<div class="container">
+      
+<div class="panel-group" id="accordion">
+  	<div class="panel panel-default">
+    	<div class="panel-heading">
+      		<h4 class="panel-title">
+        		<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+					I have a question or need help to perform an anlaysis. Can I contact you to get any help?       
+				</a>
+      		</h4>
+    	</div>
+    	<div id="collapseFour" class="panel-collapse collapse ">
+      <div class="panel-body">
+Yes, we are reachable by email. For general questions about OMA, our preferred way of answering questions is through BioStar. Please consider asking your question there, including the tag OMA. We monitor BioStar for such questions and will answer them directly on that platform.       </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+Why is my favorite genome not present in OMA?        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+        We strive to include as many complete genomes as possible, provided they are released publicly and meet reasonable quality standards. We are open for suggestions and are willing to adapt our priority queue based on user requests. If you want to analyze your "own" genomes, you can use the <a href="/standalone">OMA standalone pipeline</a> to do so and even make use of already analyzed genomes using the export function. OMA standalone is licenced under the Mozilla Public License Version 2.0. In a nutshell, OMA standalone is open source and free for commercial and non-commercial use.       </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+What is the difference between OMA Groups and Hierarchical Groups?        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+OMA Groups are sets of genes which are all orthologous to each other according to the definition of Fitch (1970). In presence of a duplication in certain gene familly, this grouping strategy will pick only one of the two lineages resulting from the duplication event. The hierarchical orthologous groups (HOGs) are defined as sets of genes that have descended from a single common ancestor within a taxonomic range of interest, i.e. they correspond to the member of a clade in a gene tree rooted at the speciation node of interest.
+Which type of groups you should choose depends highly on the type of your analysis.      </div>
+    </div>
+  </div>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+Why are OMA Groups often relatively small? Covering so many genomes, I expected them to be much bigger.         </a>
+      </h4>
+    </div>
+    <div id="collapseSeven" class="panel-collapse collapse">
+      <div class="panel-body">
+For the OMA Groups, we apply a very stringent grouping strategy. All the members of a group need to be bona fide orthologs to each other, i.e. the form a clique in graph-theoretic terms. This grouping strategy is mainly intended for applications which require orthologs of high confidence, e.g. for reconstructing species trees. A gene tree built from the members of an OMA Group should - in absence of LGT are incomplete lineage sorting - be congruent with the underlying species tree. If you are interested in larger groups, consider using the OMA HOGs. These hierarchical orthologous groups are defined as set of genes that all started diverging from a single ancestral gene at a given time point of reference.      </div>
+    </div>
+  </div>
+        
+            <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseHeight">
+          Under what licence is OMA distributed </a>      </h4>
+    </div>
+    <div id="collapseHeight" class="panel-collapse collapse">
+      <div class="panel-body">
+        The OMA Browser is available under the Creative Commons Attribution-Share Alike 2.5 License, and the OMA standalone package under the MPL 2.0 (open source) licence.</div>    </div>
+  </div>
+      
+      
+      
+      
+      
+      
+</div>       
+</div>      
+
+
+{{!-- 	<div class="container">
+	  	<div class="panel-group" id="accordion">
+	        <div class="faqHeader">General questions</div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Is account registration required?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseOne" class="panel-collapse collapse in">
+	                <div class="panel-body">
+	                    Account registration at <strong>PrepBootstrap</strong> is only required if you will be selling or buying themes. 
+	                    This ensures a valid communication channel for all parties involved in any transactions. 
+	                </div>
+	            </div>
+	        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Can I submit my own Bootstrap templates or themes?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseTen" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    A lot of the content of the site has been submitted by the community. Whether it is a commercial element/template/theme 
+	                    or a free one, you are encouraged to contribute. All credits are published along with the resources. 
+	                </div>
+	            </div>
+	        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">What is the currency used for all transactions?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseEleven" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    All prices for themes, templates and other items, including each seller's or buyer's account balance are in <strong>USD</strong>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="faqHeader">Sellers</div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Who cen sell items?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseTwo" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    Any registed user, who presents a work, which is genuine and appealing, can post it on <strong>PrepBootstrap</strong>.
+	                </div>
+	            </div>
+	        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">I want to sell my items - what are the steps?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseThree" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    The steps involved in this process are really simple. All you need to do is:
+	                    <ul>
+	                        <li>Register an account</li>
+	                        <li>Activate your account</li>
+	                        <li>Go to the <strong>Themes</strong> section and upload your theme</li>
+	                        <li>The next step is the approval step, which usually takes about 72 hours.</li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How much do I get from each sale?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseFive" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    Here, at <strong>PrepBootstrap</strong>, we offer a great, 70% rate for each seller, regardless of any restrictions, such as volume, date of entry, etc.
+	                    <br />
+	                </div>
+	            </div>
+	        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Why sell my items here?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseSix" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    There are a number of reasons why you should join us:
+	                    <ul>
+	                        <li>A great 70% flat rate for your items.</li>
+	                        <li>Fast response/approval times. Many sites take weeks to process a theme or template. And if it gets rejected, there is another iteration. We have aliminated this, and made the process very fast. It only takes up to 72 hours for a template/theme to get reviewed.</li>
+	                        <li>We are not an exclusive marketplace. This means that you can sell your items on <strong>PrepBootstrap</strong>, as well as on any other marketplate, and thus increase your earning potential.</li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">What are the payment options?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseEight" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    The best way to transfer funds is via Paypal. This secure platform ensures timely payments and a secure environment. 
+	                </div>
+	            </div>
+	        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">When do I get paid?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseNine" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    Our standard payment plan provides for monthly payments. At the end of each month, all accumulated funds are transfered to your account. 
+	                    The minimum amount of your balance should be at least 70 USD. 
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="faqHeader">Buyers</div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">I want to buy a theme - what are the steps?</a>
+	                </h4>
+	            </div>
+	            <div id="collapseFour" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    Buying a theme on <strong>PrepBootstrap</strong> is really simple. Each theme has a live preview. 
+	                    Once you have selected a theme or template, which is to your liking, you can quickly and securely pay via Paypal.
+	                    <br />
+	                    Once the transaction is complete, you gain full access to the purchased product. 
+	                </div>
+	            </div>
+	        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4 class="panel-title">
+	                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">Is this the latest version of an item</a>
+	                </h4>
+	            </div>
+	            <div id="collapseSeven" class="panel-collapse collapse">
+	                <div class="panel-body">
+	                    Each item in <strong>PrepBootstrap</strong> is maintained to its latest version. This ensures its smooth operation.
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div> --}}
+</section>  

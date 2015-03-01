@@ -3,6 +3,9 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'pairs',
+    podModulePrefix: 'pairs/pods',
+    firebase_instance: 'pairsapp',
+    filepickerAPIKey: 'Aak0jm0AZRJufIXzDqgjoz',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
