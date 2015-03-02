@@ -56,7 +56,7 @@ export default Ember.Controller.extend({
 							us.save();
 							signin.set('session', us);
 							signin.save();
-					    	that.transitionToRoute("home.about");
+					    	that.transitionToRoute("my", "~"+authData.uid);
 					    }
 					});
 				});
