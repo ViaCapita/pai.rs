@@ -6,5 +6,6 @@ export default DS.Model.extend({
   username: 	    DS.attr('string'),
   firstName: 	    DS.attr('string'),
   lastName: 	    DS.attr('string'),
-  pairings:       DS.hasMany('pairing')
+  pairingRequests: DS.hasMany('pairing', { inverse: 'requester' }),
+  pairingResponses: DS.hasMany('pairing', { inverse: 'responder' })
 });
