@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   	actions: {
     	sendnewMessage: function () {
     		this.sendAction(this.get('newMessageBody'), this.get('messageRoom'));
-    		this.set('newMessageBody', "")
+    		this.set('newMessageBody', "");
 		}
 	}
 });

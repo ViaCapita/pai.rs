@@ -6,42 +6,62 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
       </button>
-      {{#link-to 'home' class="navbar-brand"}}
+      {{#link-to 'about' class="navbar-brand"}}
         <img src="/pairs.png" style="height: 50px; padding-left: 50px; padding-right: 100px;">
       {{/link-to}}
   </div>
   <ul class="nav navbar-nav">
-    {{#link-to 'about' tagName='li'}}
-      {{#link-to 'about'}}
-        {{person.firstName}} {{person.lastName}}
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        Profile <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        {{#link-to 'profile' tagName='li'}}
+            {{#link-to 'profile'}}
+            Profile
+          {{/link-to}}
+        {{/link-to}}
+        <li class="divider"></li>
+        {{#link-to 'profile.edit' tagName='li'}}
+            {{#link-to 'profile.edit'}}
+            Edit Profile
+          {{/link-to}}
+        {{/link-to}}
+        {{#link-to 'profile.images' tagName='li'}}
+            {{#link-to 'profile.images'}}
+            Images
+          {{/link-to}}
+        {{/link-to}}
+      </ul>
+    </li>   
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        Organizations <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        {{#link-to 'organizations' tagName='li'}}
+            {{#link-to 'organizations'}}
+            Show All
+          {{/link-to}}
+        {{/link-to}}
+        <li class="divider"></li>
+        {{#link-to 'organizations.add' tagName='li'}}
+            {{#link-to 'organizations.add'}}
+            Add New
+          {{/link-to}}
+        {{/link-to}}
+      </ul>
+    </li>   
+    {{#link-to 'pairings' tagName='li'}}
+        {{#link-to 'pairings'}}
+        Show All
       {{/link-to}}
-    {{/link-to}}
-    {{#link-to 'experience' tagName='li'}}
-      {{#link-to 'experience'}}
-        Experience
-      {{/link-to}}
-    {{/link-to}}
-    {{#link-to 'education' tagName='li'}}
-      {{#link-to 'education'}}
-        Education
-      {{/link-to}}
-    {{/link-to}}
-    {{#link-to 'academic' tagName='li'}}
-      {{#link-to 'academic'}}
-        Academic
-      {{/link-to}}
-    {{/link-to}}
-    {{#link-to 'demo' tagName='li'}}
-      {{#link-to 'demo'}}
-        Portfolio
-      {{/link-to}}
-    {{/link-to}}
+    {{/link-to}}        
    </ul>
    <ul class="nav navbar-nav navbar-right"> 
-    {{#if loggedin}}
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            Brendan OHara <b class="caret"></b>
+            {{person.firstName}} {{person.lastName}} <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
             {{#link-to 'account.details' tagName='li'}}
@@ -68,18 +88,6 @@
             <span class="visible-md visible-lg"><span class="fui-chat" style="font-size: 24px;"></span></span>
           </a>
         </li>
-    {{else}}
-      {{#link-to 'signin' tagName='li'}}
-        {{#link-to 'signin'}}
-          Sign In
-        {{/link-to}}
-      {{/link-to}}    
-      {{#link-to 'register' tagName='li'}}
-        {{#link-to 'register'}}
-          Register
-        {{/link-to}}
-      {{/link-to}}
-    {{/if}}
     </ul>
 </nav>
 <ul class="breadcrumb">
@@ -87,66 +95,3 @@
   <li><a href="#fakelink">My</a></li>
   <li class="active"><a href="#">Dashboard</a></li>
 </ul>
-{{!--   <aside class="right-side-wrapper">  
-      <ul class="chat">
-          <li class="left clearfix">
-            <div class="chat-body clearfix">
-                  <div class="header">
-                      <strong class="primary-font">Jack Sparrow</strong> 
-                      <small class="pull-right text-muted">
-                        <span class="glyphicon glyphicon-time"></span>12 mins ago
-                      </small>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-            </div>
-        </li>
-        <li class="right clearfix">
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <small class=" text-muted">
-                        <span class="glyphicon glyphicon-time"></span>13 mins ago
-                      </small>
-                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-        <li class="left clearfix">
-            <div class="chat-body clearfix">
-                <div class="header">
-                    <strong class="primary-font">Jack Sparrow</strong> 
-                    <small class="pull-right text-muted">
-                        <span class="glyphicon glyphicon-time"></span>14 mins ago
-                      </small>
-                </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-            </div>
-          </li>
-          <li class="right clearfix">
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <small class=" text-muted">
-                        <span class="glyphicon glyphicon-time"></span>15 mins ago
-                      </small>
-                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-      </ul>
-      <textarea class="form-control" rows="3"></textarea>
-      <button type="button" class="btn btn-primary btn-block">SEND</button>
-  </aside>   --}} 
-

@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import session from '../services/session';
 
 export function initialize(container, application) {

@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import ENV from 'pairs/config/environment';
+// import ENV from 'pairs/config/environment';
 
-export default Ember.Controller.extend({
+export default Ember.Service.extend({
 	userSession: null,
 	user:     	null,
 	uid:    	null, 

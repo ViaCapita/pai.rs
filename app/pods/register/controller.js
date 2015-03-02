@@ -47,6 +47,7 @@ export default Ember.Controller.extend({
 							    	that.set('passwordError', error);
 							  	} else {
 							    	console.log("Authenticated successfully with payload:", authData);
+
 							    	var us = that.get('store').createRecord('user-session');
 							    	us.set('uid', authData.uid);
 										us.set('provider', authData.provider);
@@ -56,17 +57,17 @@ export default Ember.Controller.extend({
 										us.set('resetPassword', authData.isTemporaryPassword);
 										us.save();
 
-						      	var username = reg.get('firstName').toLowerCase() + "-" + reg.get('lastName').toLowerCase();;
+						      	var username = reg.get('firstName').toLowerCase() + "-" + reg.get('lastName').toLowerCase();
 						      	// TODO: Need to confirm username unique
 						      	var person = that.get("store").createRecord('person', {
 						      		id: username,
 						      		createdAt: new Date(),
-						      		firstName: reg.firstName,
-						      		lastName: reg.lastName,
+						      		firstName: reg.get('firstName'),
+						      		lastName: reg.get('lastName'),
 						      	}).save();
 
 						      	var user = that.get("store").createRecord('user', {
-						      		email: reg.email,
+						      		email: reg.get('email'),
 						      		uid: authData.uid,
 						      		person: person,
 						      	}).save(); 

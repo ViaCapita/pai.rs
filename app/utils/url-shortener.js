@@ -1,5 +1,5 @@
-import { get } from 'ember';
-import computed from 'ember/computed';
+// import { get } from 'ember';
+// import computed from 'ember/computed';
 
 var alphabet, base;
 

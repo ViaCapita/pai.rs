@@ -1,9 +1,7 @@
-import TypeModel from 'pairs/models/type-model';
+import DS from 'ember-data';
 
-export default TypeModel.extend({
-  countryLanguages:       DS.belongsTo('language'),
-  percentFirst:   DS.attr('number'),
-  percentSecond:  DS.attr('number'),
-  countryCode:   DS.attr('number')
+export default DS.Model.extend({
+  name:  DS.attr('string'),
+  code:   DS.attr('string')
 });
 
