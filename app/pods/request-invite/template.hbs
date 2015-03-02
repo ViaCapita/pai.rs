@@ -7,7 +7,7 @@
                     <div class="header-14">
                         <img src="/pairs.png">
                     </div>
-                    {{#liquid-unless requested class="requestInvite"}}
+                    {{#unless requested containerless=true class="requestInvite"}}
                     	<h3>We are launching a new way to find and pair with other developers to solve problems and grow your skills.</h3>
                     	<p>Sign up below for an invite to our private beta.</p>
                     	<div class="row">
@@ -28,7 +28,7 @@
                 		<div class="hero-unit">
                             <h2>Made with <span class="fui-heart" style="color: #de4e43;"></span> in New York</h2>
                         </div> 
-                    {{/liquid-unless}}                 
+                    {{/unless}}                 
                 </div>
             </div>
         </div>
